@@ -78,6 +78,30 @@ LOCK TABLES `Client` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `DateOfEngagement`
+--
+
+DROP TABLE IF EXISTS `DateOfEngagement`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `DateOfEngagement` (
+  `Id` int(11) NOT NULL,
+  `DateOfEngagement` varchar(75) DEFAULT NULL,
+  `BaseMetadata` varchar(75) DEFAULT NULL,
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `DateOfEngagement`
+--
+
+LOCK TABLES `DateOfEngagement` WRITE;
+/*!40000 ALTER TABLE `DateOfEngagement` DISABLE KEYS */;
+/*!40000 ALTER TABLE `DateOfEngagement` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `Enrollment`
 --
 
@@ -108,6 +132,32 @@ LOCK TABLES `Enrollment` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `EnrollmentCoC`
+--
+
+DROP TABLE IF EXISTS `EnrollmentCoC`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `EnrollmentCoC` (
+  `Id` int(11) NOT NULL,
+  `InformationDate` varchar(75) DEFAULT NULL,
+  `CoCCode` varchar(75) DEFAULT NULL,
+  `BaseMetadata` varchar(75) DEFAULT NULL,
+  `Metadata` varchar(75) DEFAULT NULL,
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `EnrollmentCoC`
+--
+
+LOCK TABLES `EnrollmentCoC` WRITE;
+/*!40000 ALTER TABLE `EnrollmentCoC` DISABLE KEYS */;
+/*!40000 ALTER TABLE `EnrollmentCoC` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `Funder`
 --
 
@@ -132,6 +182,63 @@ CREATE TABLE `Funder` (
 LOCK TABLES `Funder` WRITE;
 /*!40000 ALTER TABLE `Funder` DISABLE KEYS */;
 /*!40000 ALTER TABLE `Funder` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `IncomeAndSources`
+--
+
+DROP TABLE IF EXISTS `IncomeAndSources`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `IncomeAndSources` (
+  `Id` int(11) NOT NULL,
+  `InformationDate` varchar(75) DEFAULT NULL,
+  `IncomeFromAnySource` varchar(75) DEFAULT NULL,
+  `TotalMonthlyIncome` varchar(75) DEFAULT NULL,
+  `Earned` varchar(75) DEFAULT NULL,
+  `EarnedAmount` varchar(75) DEFAULT NULL,
+  `Unemployment` varchar(75) DEFAULT NULL,
+  `UnemploymentAmount` varchar(75) DEFAULT NULL,
+  `SSI` varchar(75) DEFAULT NULL,
+  `SSIAmount` varchar(75) DEFAULT NULL,
+  `SSDI` varchar(75) DEFAULT NULL,
+  `SSDIAmount` varchar(75) DEFAULT NULL,
+  `VADisabilityService` varchar(75) DEFAULT NULL,
+  `VADisabilityServiceAmount` varchar(75) DEFAULT NULL,
+  `VADisabilityNonService` varchar(75) DEFAULT NULL,
+  `VADisabilityNonServiceAmount` varchar(75) DEFAULT NULL,
+  `PrivateDisability` varchar(75) DEFAULT NULL,
+  `PrivateDisabilityAmount` varchar(75) DEFAULT NULL,
+  `WorkersComp` varchar(75) DEFAULT NULL,
+  `WorkersCompAmount` varchar(75) DEFAULT NULL,
+  `TANF` varchar(75) DEFAULT NULL,
+  `TANFAmount` varchar(75) DEFAULT NULL,
+  `GA` varchar(75) DEFAULT NULL,
+  `GAAmount` varchar(75) DEFAULT NULL,
+  `SocSecRetirement` varchar(75) DEFAULT NULL,
+  `SocSecRetirementAmount` varchar(75) DEFAULT NULL,
+  `Pension` varchar(75) DEFAULT NULL,
+  `PensionAmount` varchar(75) DEFAULT NULL,
+  `ChildSupport` varchar(75) DEFAULT NULL,
+  `ChildSupportAmount` varchar(75) DEFAULT NULL,
+  `Alimony` varchar(75) DEFAULT NULL,
+  `AlimonyAmount` varchar(75) DEFAULT NULL,
+  `OtherSource` varchar(75) DEFAULT NULL,
+  `OtherSourceAmount` varchar(75) DEFAULT NULL,
+  `BaseMetadata` varchar(75) DEFAULT NULL,
+  `Metadata` varchar(75) DEFAULT NULL,
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `IncomeAndSources`
+--
+
+LOCK TABLES `IncomeAndSources` WRITE;
+/*!40000 ALTER TABLE `IncomeAndSources` DISABLE KEYS */;
+/*!40000 ALTER TABLE `IncomeAndSources` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -171,6 +278,41 @@ LOCK TABLES `Inventory` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `NonCashBenefits`
+--
+
+DROP TABLE IF EXISTS `NonCashBenefits`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `NonCashBenefits` (
+  `Id` int(11) NOT NULL,
+  `InformationDate` varchar(75) DEFAULT NULL,
+  `BenefitsFromAnySource` varchar(75) DEFAULT NULL,
+  `SNAP` varchar(75) DEFAULT NULL,
+  `WIC` varchar(75) DEFAULT NULL,
+  `TANFChildCare` varchar(75) DEFAULT NULL,
+  `TANFTransportation` varchar(75) DEFAULT NULL,
+  `OtherTANF` varchar(75) DEFAULT NULL,
+  `RentalAssistanceOngoing` varchar(75) DEFAULT NULL,
+  `RentalAssistanceTemp` varchar(75) DEFAULT NULL,
+  `OtherSource` varchar(75) DEFAULT NULL,
+  `OtherSourceIdentify` varchar(75) DEFAULT NULL,
+  `BaseMetadata` varchar(75) DEFAULT NULL,
+  `Metadata` varchar(75) DEFAULT NULL,
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `NonCashBenefits`
+--
+
+LOCK TABLES `NonCashBenefits` WRITE;
+/*!40000 ALTER TABLE `NonCashBenefits` DISABLE KEYS */;
+/*!40000 ALTER TABLE `NonCashBenefits` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `Organization`
 --
 
@@ -195,6 +337,56 @@ CREATE TABLE `Organization` (
 LOCK TABLES `Organization` WRITE;
 /*!40000 ALTER TABLE `Organization` DISABLE KEYS */;
 /*!40000 ALTER TABLE `Organization` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `PATHStatus`
+--
+
+DROP TABLE IF EXISTS `PATHStatus`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `PATHStatus` (
+  `Id` int(11) NOT NULL,
+  `DateOfStatus` varchar(75) DEFAULT NULL,
+  `ClientEnrollmentInPath` varchar(75) DEFAULT NULL,
+  `ReasonNotEnrolled` varchar(75) DEFAULT NULL,
+  `BaseMetadata` varchar(75) DEFAULT NULL,
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `PATHStatus`
+--
+
+LOCK TABLES `PATHStatus` WRITE;
+/*!40000 ALTER TABLE `PATHStatus` DISABLE KEYS */;
+/*!40000 ALTER TABLE `PATHStatus` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `PercentAMI`
+--
+
+DROP TABLE IF EXISTS `PercentAMI`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `PercentAMI` (
+  `Id` int(11) NOT NULL,
+  `PercentAMI` varchar(75) DEFAULT NULL,
+  `BaseMetadata` varchar(75) DEFAULT NULL,
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `PercentAMI`
+--
+
+LOCK TABLES `PercentAMI` WRITE;
+/*!40000 ALTER TABLE `PercentAMI` DISABLE KEYS */;
+/*!40000 ALTER TABLE `PercentAMI` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -249,6 +441,31 @@ CREATE TABLE `ProjectCoC` (
 LOCK TABLES `ProjectCoC` WRITE;
 /*!40000 ALTER TABLE `ProjectCoC` DISABLE KEYS */;
 /*!40000 ALTER TABLE `ProjectCoC` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `ResidentialMoveInDate`
+--
+
+DROP TABLE IF EXISTS `ResidentialMoveInDate`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `ResidentialMoveInDate` (
+  `Id` int(11) NOT NULL,
+  `InPermanentHousing` varchar(75) DEFAULT NULL,
+  `ResidentialMoveInDate` varchar(75) DEFAULT NULL,
+  `BaseMetadata` varchar(75) DEFAULT NULL,
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `ResidentialMoveInDate`
+--
+
+LOCK TABLES `ResidentialMoveInDate` WRITE;
+/*!40000 ALTER TABLE `ResidentialMoveInDate` DISABLE KEYS */;
+/*!40000 ALTER TABLE `ResidentialMoveInDate` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -323,4 +540,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-03-25 21:21:36
+-- Dump completed on 2015-03-27  4:09:13
